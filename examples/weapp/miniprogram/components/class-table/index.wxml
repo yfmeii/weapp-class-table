@@ -1,0 +1,83 @@
+<wxs module="tool" src="./tool.wxs" />
+
+<view class="class-table-box">
+  <image
+    class="class-table-background {{ resolvedSettings.background.blur ? 'scale' : '' }}"
+    mode="aspectFill"
+    src="{{ resolvedSettings.background.url }}"
+    style="{{ backgroundStyle }}"
+    wx:if="{{ resolvedSettings.background.url }}"
+  />
+
+  <view class="class-table-date-list {{ resolvedSettings.background.url ? 'with-background' : '' }}">
+    <view class="class-table-date-item month">{{ month }}月</view>
+    <view
+      class="class-table-date-item {{ todayIndex === index ? 'today' : '' }}"
+      wx:for="{{ tool.genIntArr(0, resolvedSettings.showWeekend ? 7 : 5) }}"
+      wx:key="*this"
+    >
+      <view class="class-table-date-item-day">周{{ weekdays[index] }}</view>
+      <view class="class-table-date-item-date">{{ days[index] || '' }}日</view>
+    </view>
+  </view>
+
+  <view class="top-bg"></view>
+  <view class="left-bg"></view>
+
+  <view class="class-table-content" style="height: {{ resolvedSettings.cellHeight * maxSection }}rpx;">
+    <view
+      class="class-table-content-line"
+      style="top: {{ resolvedSettings.cellHeight * (index + 1) }}rpx;"
+      wx:for="{{ tool.genIntArr(0, maxSection) }}"
+      wx:key="*this"
+    ></view>
+
+    <view class="class-table-content-left">
+      <view
+        class="class-table-content-left-section"
+        wx:for="{{ tool.genIntArr(0, maxSection) }}"
+        wx:key="*this"
+      >
+        <text class="text">{{ index + 1 }}</text>
+        <text class="time">{{ resolvedSectionTimes[index + 1].start }}</text>
+        <text class="time">{{ resolvedSectionTimes[index + 1].end }}</text>
+      </view>
+    </view>
+
+    <view class="class-table-content-right">
+      <view
+        bindtap="handleCourseTap"
+        class="class-table-content-item-box"
+        data-info="{{ item }}"
+        style="{{ tool.getClassPosition(item, maxSection, resolvedSettings.showWeekend) }}"
+        wx:for="{{ renderData }}"
+        wx:key="id"
+      >
+        <view class="class-table-content-item class-table-cell-style-{{ item.color }}">
+          <block wx:if="{{ item.sections.length * resolvedSettings.cellHeight >= 209 }}">
+            <text
+              class="class-table-content-item-remark"
+              max-lines="1"
+              overflow="ellipsis"
+              wx:if="{{ !item.isCurrentWeek }}"
+            >[非本周]</text>
+          </block>
+
+          <text class="class-table-content-item-name" max-lines="2" overflow="ellipsis">{{ item.courseName }}</text>
+
+          <block wx:if="{{ item.sections.length * resolvedSettings.cellHeight >= 144 }}">
+            <text class="class-table-content-item-place" max-lines="2" overflow="ellipsis">{{ item.place }}</text>
+          </block>
+
+          <block wx:if="{{ item.sections.length * resolvedSettings.cellHeight >= 171 }}">
+            <text class="class-table-content-item-teacher" max-lines="1" overflow="ellipsis">{{ item.teacher }}</text>
+          </block>
+
+          <block wx:if="{{ item.sections.length * resolvedSettings.cellHeight >= 192 }}">
+            <view class="item-overlap class-table-overlap-color-{{ item.color }}" wx:if="{{ item.hasSameCell }}"></view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

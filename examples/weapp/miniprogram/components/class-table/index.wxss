@@ -1,0 +1,335 @@
+view,
+text,
+image {
+  box-sizing: border-box;
+}
+
+.class-table-content-item text {
+  display: block;
+}
+
+.class-table-box {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 20rpx;
+  border-radius: 20rpx;
+  background-color: var(--card, #ffffff);
+}
+
+.class-table-box .left-bg {
+  position: absolute;
+  z-index: 10;
+  top: 84rpx;
+  left: 0;
+  width: 64rpx;
+  height: 100%;
+  border-right: 1rpx solid var(--border, #e4e4e7);
+  background: var(--card, #ffffff);
+}
+
+.class-table-box .top-bg {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84rpx;
+  border-bottom: 1rpx solid var(--border, #e4e4e7);
+  background: var(--card, #ffffff);
+}
+
+.class-table-box .class-table-background {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.class-table-box .class-table-background.scale {
+  transform: scale(1.1);
+}
+
+.class-table-box .class-table-date-list {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  height: 84rpx;
+  text-align: center;
+}
+
+.class-table-box .class-table-date-list .class-table-date-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rpx 0;
+  text-align: center;
+}
+
+.class-table-box .class-table-date-list .class-table-date-item.month {
+  flex: initial;
+  width: 64rpx;
+  border-right: 1rpx solid var(--border, #e4e4e7);
+  color: var(--muted-foreground, #71717a);
+  font-size: 24rpx;
+}
+
+.class-table-box .class-table-date-list .class-table-date-item .class-table-date-item-day {
+  color: var(--foreground, #09090b);
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.class-table-box .class-table-date-list .class-table-date-item .class-table-date-item-date {
+  color: var(--muted-foreground, #71717a);
+  font-size: 20rpx;
+}
+
+.class-table-box .class-table-date-list .class-table-date-item.today .class-table-date-item-day,
+.class-table-box .class-table-date-list .class-table-date-item.today .class-table-date-item-date {
+  color: var(--primary, #2563eb);
+  font-weight: 700;
+}
+
+.class-table-box .class-table-content {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+}
+
+.class-table-box .class-table-content .class-table-content-left {
+  display: flex;
+  flex-direction: column;
+  width: 64rpx;
+}
+
+.class-table-box .class-table-content .class-table-content-right {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.class-table-box .class-table-content .class-table-content-left-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.class-table-box .class-table-content .class-table-content-left-section .time {
+  color: var(--muted-foreground, #71717a);
+  font-size: 16rpx;
+}
+
+.class-table-box .class-table-content .class-table-content-left-section .text {
+  margin-bottom: 8rpx;
+  color: var(--foreground, #09090b);
+  font-weight: 700;
+}
+
+.class-table-content-line {
+  position: absolute;
+  width: 100%;
+  height: 1rpx;
+  background-color: var(--border, #e4e4e7);
+}
+
+.class-table-content-item-box {
+  position: absolute;
+  padding: 2rpx;
+}
+
+.class-table-content-item {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2rpx;
+  padding: 8rpx;
+}
+
+.class-table-content-item .class-table-content-item-remark {
+  margin-bottom: 8rpx;
+  font-size: 16rpx;
+  line-height: 1.5;
+}
+
+.class-table-content-item .class-table-content-item-name {
+  margin-bottom: 8rpx;
+  font-size: 22rpx;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.class-table-content-item .class-table-content-item-teacher,
+.class-table-content-item .class-table-content-item-place {
+  font-size: 18rpx;
+  line-height: 1.5;
+}
+
+.class-table-content-item .class-table-content-item-place {
+  margin-bottom: 8rpx;
+}
+
+.class-table-content-item .item-overlap {
+  position: absolute;
+  right: 8rpx;
+  bottom: 8rpx;
+  left: 8rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Original class-table palette from the app. */
+.class-table-color-0 { background: #999999; }
+.class-table-color-1 { background: #009688; }
+.class-table-color-2 { background: #3ca4b6; }
+.class-table-color-3 { background: #c2677c; }
+.class-table-color-4 { background: #4f84e6; }
+.class-table-color-5 { background: #516dcc; }
+.class-table-color-6 { background: #ae5c51; }
+.class-table-color-7 { background: #04888b; }
+.class-table-color-8 { background: #bb4fdd; }
+.class-table-color-9 { background: #308bbc; }
+.class-table-color-10 { background: #008b8c; }
+.class-table-color-11 { background: #ee7785; }
+.class-table-color-12 { background: #2a9bb2; }
+.class-table-color-13 { background: #0d7857; }
+.class-table-color-14 { background: #f16bac; }
+.class-table-color-15 { background: #67beb0; }
+.class-table-color-16 { background: #2198c0; }
+.class-table-color-17 { background: #ce945a; }
+.class-table-color-18 { background: #915e75; }
+.class-table-color-19 { background: #4ea581; }
+.class-table-color-20 { background: #b859e4; }
+.class-table-color-21 { background: #22b346; }
+.class-table-color-22 { background: #5ba573; }
+.class-table-color-23 { background: #d34e5b; }
+.class-table-color-24 { background: #ce5d55; }
+.class-table-color-25 { background: #d16c44; }
+.class-table-color-26 { background: #8f527f; }
+.class-table-color-27 { background: #e573a7; }
+.class-table-color-28 { background: #167e60; }
+.class-table-color-29 { background: #73bea5; }
+.class-table-color-30 { background: #286481; }
+.class-table-color-31 { background: #a9b2b4; }
+.class-table-color-32 { background: #1695cc; }
+.class-table-color-33 { background: #c05d3f; }
+.class-table-color-34 { background: #a0674b; }
+.class-table-color-35 { background: #b495e1; }
+.class-table-color-36 { background: #ac92db; }
+.class-table-color-37 { background: #59965b; }
+.class-table-color-38 { background: #609260; }
+.class-table-color-39 { background: #c9435e; }
+.class-table-color-40 { background: #217275; }
+.class-table-color-41 { background: #587bda; }
+
+.class-table-cell-style-0 { background: rgba(179, 179, 179, 0.3); color: #999999 !important; }
+.class-table-cell-style-1 { background: rgba(26, 179, 163, 0.3); color: #009688 !important; }
+.class-table-cell-style-2 { background: rgba(82, 183, 200, 0.3); color: #3ca4b6 !important; }
+.class-table-cell-style-3 { background: rgba(207, 126, 148, 0.3); color: #c2677c !important; }
+.class-table-cell-style-4 { background: rgba(97, 149, 237, 0.3); color: #4f84e6 !important; }
+.class-table-cell-style-5 { background: rgba(98, 130, 214, 0.3); color: #516dcc !important; }
+.class-table-cell-style-6 { background: rgba(191, 116, 105, 0.3); color: #ae5c51 !important; }
+.class-table-cell-style-7 { background: rgba(30, 159, 162, 0.3); color: #04888b !important; }
+.class-table-cell-style-8 { background: rgba(203, 97, 231, 0.3); color: #bb4fdd !important; }
+.class-table-cell-style-9 { background: rgba(66, 160, 206, 0.3); color: #308bbc !important; }
+.class-table-cell-style-10 { background: rgba(26, 162, 163, 0.3); color: #008b8c !important; }
+.class-table-cell-style-11 { background: rgba(241, 142, 156, 0.3); color: #ee7785 !important; }
+.class-table-cell-style-12 { background: rgba(60, 178, 197, 0.3); color: #2a9bb2 !important; }
+.class-table-cell-style-13 { background: rgba(13, 120, 87, 0.3); color: #0d7857 !important; }
+.class-table-cell-style-14 { background: rgba(241, 107, 172, 0.3); color: #f16bac !important; }
+.class-table-cell-style-15 { background: rgba(103, 190, 176, 0.3); color: #67beb0 !important; }
+.class-table-cell-style-16 { background: rgba(33, 152, 192, 0.3); color: #2198c0 !important; }
+.class-table-cell-style-17 { background: rgba(206, 148, 90, 0.3); color: #ce945a !important; }
+.class-table-cell-style-18 { background: rgba(145, 94, 117, 0.3); color: #915e75 !important; }
+.class-table-cell-style-19 { background: rgba(78, 165, 129, 0.3); color: #4ea581 !important; }
+.class-table-cell-style-20 { background: rgba(184, 89, 228, 0.3); color: #b859e4 !important; }
+.class-table-cell-style-21 { background: rgba(34, 179, 70, 0.3); color: #22b346 !important; }
+.class-table-cell-style-22 { background: rgba(91, 165, 115, 0.3); color: #5ba573 !important; }
+.class-table-cell-style-23 { background: rgba(211, 78, 91, 0.3); color: #d34e5b !important; }
+.class-table-cell-style-24 { background: rgba(206, 93, 85, 0.3); color: #ce5d55 !important; }
+.class-table-cell-style-25 { background: rgba(209, 108, 68, 0.3); color: #d16c44 !important; }
+.class-table-cell-style-26 { background: rgba(143, 82, 127, 0.3); color: #8f527f !important; }
+.class-table-cell-style-27 { background: rgba(229, 115, 167, 0.3); color: #e573a7 !important; }
+.class-table-cell-style-28 { background: rgba(22, 126, 96, 0.3); color: #167e60 !important; }
+.class-table-cell-style-29 { background: rgba(115, 190, 165, 0.3); color: #73bea5 !important; }
+.class-table-cell-style-30 { background: rgba(40, 100, 129, 0.3); color: #286481 !important; }
+.class-table-cell-style-31 { background: rgba(169, 178, 180, 0.3); color: #a9b2b4 !important; }
+.class-table-cell-style-32 { background: rgba(22, 149, 204, 0.3); color: #1695cc !important; }
+.class-table-cell-style-33 { background: rgba(192, 93, 63, 0.3); color: #c05d3f !important; }
+.class-table-cell-style-34 { background: rgba(160, 103, 75, 0.3); color: #a0674b !important; }
+.class-table-cell-style-35 { background: rgba(180, 149, 225, 0.3); color: #b495e1 !important; }
+.class-table-cell-style-36 { background: rgba(172, 146, 219, 0.3); color: #ac92db !important; }
+.class-table-cell-style-37 { background: rgba(89, 150, 91, 0.3); color: #59965b !important; }
+.class-table-cell-style-38 { background: rgba(96, 146, 96, 0.3); color: #609260 !important; }
+.class-table-cell-style-39 { background: rgba(201, 67, 94, 0.3); color: #c9435e !important; }
+.class-table-cell-style-40 { background: rgba(33, 114, 117, 0.3); color: #217275 !important; }
+.class-table-cell-style-41 { background: rgba(88, 123, 218, 0.3); color: #587bda !important; }
+
+.dark .class-table-cell-style-0 { background: rgba(153, 153, 153, 0.15); color: #b3b3b3 !important; }
+.dark .class-table-cell-style-1 { background: rgba(0, 150, 136, 0.15); color: #1ab3a3 !important; }
+.dark .class-table-cell-style-2 { background: rgba(60, 164, 182, 0.15); color: #52b7c8 !important; }
+.dark .class-table-cell-style-3 { background: rgba(194, 103, 124, 0.15); color: #cf7e94 !important; }
+.dark .class-table-cell-style-4 { background: rgba(79, 132, 230, 0.15); color: #6195ed !important; }
+.dark .class-table-cell-style-5 { background: rgba(81, 109, 204, 0.15); color: #6282d6 !important; }
+.dark .class-table-cell-style-6 { background: rgba(174, 92, 81, 0.15); color: #bf7469 !important; }
+.dark .class-table-cell-style-7 { background: rgba(4, 136, 139, 0.15); color: #1e9fa2 !important; }
+.dark .class-table-cell-style-8 { background: rgba(187, 79, 221, 0.15); color: #cb61e7 !important; }
+.dark .class-table-cell-style-9 { background: rgba(48, 139, 188, 0.15); color: #42a0ce !important; }
+.dark .class-table-cell-style-10 { background: rgba(0, 139, 140, 0.15); color: #1aa2a3 !important; }
+.dark .class-table-cell-style-11 { background: rgba(238, 119, 133, 0.15); color: #f18e9c !important; }
+.dark .class-table-cell-style-12 { background: rgba(42, 155, 178, 0.15); color: #3cb2c5 !important; }
+.dark .class-table-cell-style-13 { background: rgba(13, 120, 87, 0.15); color: #0d7857 !important; }
+.dark .class-table-cell-style-14 { background: rgba(241, 107, 172, 0.15); color: #f16bac !important; }
+.dark .class-table-cell-style-15 { background: rgba(103, 190, 176, 0.15); color: #67beb0 !important; }
+.dark .class-table-cell-style-16 { background: rgba(33, 152, 192, 0.15); color: #2198c0 !important; }
+.dark .class-table-cell-style-17 { background: rgba(206, 148, 90, 0.15); color: #ce945a !important; }
+.dark .class-table-cell-style-18 { background: rgba(145, 94, 117, 0.15); color: #915e75 !important; }
+.dark .class-table-cell-style-19 { background: rgba(78, 165, 129, 0.15); color: #4ea581 !important; }
+.dark .class-table-cell-style-20 { background: rgba(184, 89, 228, 0.15); color: #b859e4 !important; }
+.dark .class-table-cell-style-21 { background: rgba(34, 179, 70, 0.15); color: #22b346 !important; }
+.dark .class-table-cell-style-22 { background: rgba(91, 165, 115, 0.15); color: #5ba573 !important; }
+.dark .class-table-cell-style-23 { background: rgba(211, 78, 91, 0.15); color: #d34e5b !important; }
+.dark .class-table-cell-style-24 { background: rgba(206, 93, 85, 0.15); color: #ce5d55 !important; }
+.dark .class-table-cell-style-25 { background: rgba(209, 108, 68, 0.15); color: #d16c44 !important; }
+.dark .class-table-cell-style-26 { background: rgba(143, 82, 127, 0.15); color: #8f527f !important; }
+.dark .class-table-cell-style-27 { background: rgba(229, 115, 167, 0.15); color: #e573a7 !important; }
+.dark .class-table-cell-style-28 { background: rgba(22, 126, 96, 0.15); color: #167e60 !important; }
+.dark .class-table-cell-style-29 { background: rgba(115, 190, 165, 0.15); color: #73bea5 !important; }
+.dark .class-table-cell-style-30 { background: rgba(40, 100, 129, 0.15); color: #286481 !important; }
+.dark .class-table-cell-style-31 { background: rgba(169, 178, 180, 0.15); color: #a9b2b4 !important; }
+.dark .class-table-cell-style-32 { background: rgba(22, 149, 204, 0.15); color: #1695cc !important; }
+.dark .class-table-cell-style-33 { background: rgba(192, 93, 63, 0.15); color: #c05d3f !important; }
+.dark .class-table-cell-style-34 { background: rgba(160, 103, 75, 0.15); color: #a0674b !important; }
+.dark .class-table-cell-style-35 { background: rgba(180, 149, 225, 0.15); color: #b495e1 !important; }
+.dark .class-table-cell-style-36 { background: rgba(172, 146, 219, 0.15); color: #ac92db !important; }
+.dark .class-table-cell-style-37 { background: rgba(89, 150, 91, 0.15); color: #59965b !important; }
+.dark .class-table-cell-style-38 { background: rgba(96, 146, 96, 0.15); color: #609260 !important; }
+.dark .class-table-cell-style-39 { background: rgba(201, 67, 94, 0.15); color: #c9435e !important; }
+.dark .class-table-cell-style-40 { background: rgba(33, 114, 117, 0.15); color: #217275 !important; }
+.dark .class-table-cell-style-41 { background: rgba(88, 123, 218, 0.15); color: #587bda !important; }
+
+.class-table-overlap-color-0,
+.class-table-overlap-color-1,
+.class-table-overlap-color-2,
+.class-table-overlap-color-3,
+.class-table-overlap-color-4,
+.class-table-overlap-color-5,
+.class-table-overlap-color-6,
+.class-table-overlap-color-7,
+.class-table-overlap-color-8,
+.class-table-overlap-color-9,
+.class-table-overlap-color-10,
+.class-table-overlap-color-11,
+.class-table-overlap-color-12 {
+  background: currentColor;
+  opacity: 0.5;
+}

@@ -1,0 +1,28 @@
+function genIntArr(start, end) {
+  var result = []
+
+  for (var index = start; index < end; index = index + 1) {
+    result.push(index)
+  }
+
+  return result
+}
+
+function getClassPosition(course, maxSection, showWeekend) {
+  var days = showWeekend ? 7 : 5
+  var weekday = course.weekday
+  var sectionStart = course.sections[0].section
+  var sectionLength = course.sections.length
+  var height = 'height: ' + ((sectionLength / maxSection) * 100).toString() + '%;'
+  var top = 'top: ' + (((sectionStart - 1) / maxSection) * 100).toString() + '%;'
+  var left = 'left: ' + ((weekday - 1) * (100 / days)).toString() + '%;'
+  var width = 'width: ' + (100 / days).toString() + '%;'
+  var zIndex = 'z-index: ' + course.zIndex + ';'
+
+  return height + ' ' + top + ' ' + left + ' ' + width + ' ' + zIndex
+}
+
+module.exports = {
+  genIntArr: genIntArr,
+  getClassPosition: getClassPosition,
+}

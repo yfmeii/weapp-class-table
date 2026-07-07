@@ -1,0 +1,76 @@
+.page {
+  --background: #f6f6f6;
+  --foreground: #09090b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --primary: #2563eb;
+  --primary-foreground: #fafafa;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+
+  min-height: 100vh;
+  padding: 24rpx;
+  background: var(--background);
+}
+
+.page.dark {
+  --background: #18181b;
+  --foreground: #fafafa;
+  --card: #09090b;
+  --card-foreground: #fafafa;
+  --primary: #3b82f6;
+  --primary-foreground: #09090b;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.page-title {
+  color: var(--foreground);
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.page-description {
+  margin-top: 8rpx;
+  color: var(--muted-foreground);
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.theme-toggle {
+  flex: none;
+  border-radius: 999rpx;
+  padding: 12rpx 24rpx;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 24rpx;
+  line-height: 1.4;
+}
+
+.theme-toggle::after {
+  border: none;
+}
+
+.dark .class-table-cell-style-0 { background: rgba(153, 153, 153, 0.15); color: #b3b3b3 !important; }
+.dark .class-table-cell-style-1 { background: rgba(0, 150, 136, 0.15); color: #1ab3a3 !important; }
+.dark .class-table-cell-style-2 { background: rgba(60, 164, 182, 0.15); color: #52b7c8 !important; }
+.dark .class-table-cell-style-3 { background: rgba(194, 103, 124, 0.15); color: #cf7e94 !important; }
+.dark .class-table-cell-style-4 { background: rgba(79, 132, 230, 0.15); color: #6195ed !important; }
+.dark .class-table-cell-style-5 { background: rgba(81, 109, 204, 0.15); color: #6282d6 !important; }
+.dark .class-table-cell-style-6 { background: rgba(174, 92, 81, 0.15); color: #bf7469 !important; }
+.dark .class-table-cell-style-7 { background: rgba(4, 136, 139, 0.15); color: #1e9fa2 !important; }
+.dark .class-table-cell-style-8 { background: rgba(187, 79, 221, 0.15); color: #cb61e7 !important; }
+.dark .class-table-cell-style-9 { background: rgba(48, 139, 188, 0.15); color: #42a0ce !important; }
+.dark .class-table-cell-style-10 { background: rgba(0, 139, 140, 0.15); color: #1aa2a3 !important; }
+.dark .class-table-cell-style-11 { background: rgba(238, 119, 133, 0.15); color: #f18e9c !important; }
+.dark .class-table-cell-style-12 { background: rgba(42, 155, 178, 0.15); color: #3cb2c5 !important; }

@@ -1,0 +1,19 @@
+<view class="page {{ isDark ? 'dark' : '' }}">
+  <view class="page-header">
+    <view>
+      <view class="page-title">传统小程序示例</view>
+      <view class="page-description">支持浅色 / 深色主题、非本周课程和冲突课程提示。</view>
+    </view>
+    <button class="theme-toggle" bindtap="toggleTheme">{{ isDark ? '浅色' : '深色' }}</button>
+  </view>
+
+  <class-table
+    courses="{{ courses }}"
+    current-week="{{ currentWeek }}"
+    term-start-date="{{ termStartDate }}"
+    section-times="{{ sectionTimes }}"
+    settings="{{ settings }}"
+    bind:courseTap="handleCourseTap"
+    bind:weekendDetected="handleWeekendDetected"
+  />
+</view>

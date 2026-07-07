@@ -1,0 +1,8 @@
+{
+  "name": "weapp-class-table-example-weapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "weapp-class-table": "file:../.."
+  }
+}
