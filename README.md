@@ -4,6 +4,10 @@
 
 `weapp-class-table` 适合展示按周排列的课程表，包含日期表头、节次时间、课程卡片、非本周课程、冲突课程提示和浅色 / 深色主题适配。
 
+<p align="center">
+  <img src="./assets/screenshot.png" alt="weapp-class-table 示例截图" width="360" />
+</p>
+
 ## 特性
 
 - 支持周一到周五 / 周一到周日显示。
